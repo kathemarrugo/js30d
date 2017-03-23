@@ -1,42 +1,73 @@
 body{
-background-image: url("fondo.jpg");
+/*background-image: url("fondo.jpg");
 background-size: cover;
-width:100%;
+width:100%;*/
+background: blue; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left, #0085ff , #73dcec); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #0085ff , #73dcec); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right,#0085ff , #73dcec); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #0085ff , #73dcec); /* Standard syntax */
 }
 
+
+.tittle{
+  width: 150px;
+  margin:0px  auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+span{
+  vertical-align: middle;
+  font-size: 10px;
+  color: #ffffff;
+  font-size: 30px;
+  font-family:Jazz LET, fantasy ;
+}
 .circle{
+  overflow:hidden;
   border-radius: 100%;
   width: 300px;
   height: 300px;
-  margin: 20% auto;
-  background-color: #ffffff;
-  border:  2px solid #138D75;
+  margin:0 auto;
+  background-color:rgba(255, 255, 255, 0.86);
+  border:  10px solid #356090;
+
 }
+
 .hrs-line{
-  width: 150px;
+  width: 50%;
   height: 1px;
   background-color: #001a33;
-  border:  2px solid #001a33;
+  border: 2px solid #001a33;
+  transform-origin: 100%;
   transform: rotate(90deg);
+  margin-top: 150px;
   position: static;
+  display: inline-table;
+  /*float: left;*/
+  transition-timing-function: cubic-bezier(0.07, 1.34, 1, 1);
 }
 .mins-line{
   width: 150px;
   height: 1px;
-  margin: -40% auto;
   background-color: #001a33;
-  border:  2px solid #001b33;
-  transform: rotate(180deg);
+  border: 2px solid #001a33;
   transform-origin: 100%;
-  position: static;
+  transform: rotate(90deg);
+  margin-top: -10px;
+  transition-timing-function: cubic-bezier(0.07, 1.34, 1, 1);
 }
 
 .secs-line{
   width: 150px;
   height: 1px;
-  margin: 20px -40% auto;
   background-color: #001a33;
-  border:  2px solid #001a33;
-  transform: rotate(0deg);
-  position: static;
+  border: 2px solid #001a33;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  margin-top: -5px;
+  /*transition: all 0.5s;*/
+  transition-timing-function: cubic-bezier(0.07, 1.34, 1, 1);
+
 }
