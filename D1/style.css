@@ -1,0 +1,42 @@
+body {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    width:100%;
+    align-content: center;
+}
+
+.keys{
+  width: 80%;
+  margin: 500px auto;
+  align-content: center;
+}
+
+.key{
+  display: inline-block;
+  width:  60px;
+  height: 70px;
+  margin: 10px;
+  border: 5px solid #070001;
+  text-align: center;
+  background: #0A0A0A;
+  opacity: 0.5;
+  text-shadow: 0 0 5px black;
+  transition: all 0.07s;
+}
+.playing{
+transform: scale(1.1);
+border-color: #ffc600;
+box-shadow: 0 0 10px #ffc600;
+
+}
+
+kbd{
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.sound{
+    display: block;
+    font-size: 10px;
+    color: #FAAA29;
+}
