@@ -4,6 +4,7 @@ function setDay(){
   const hrsline= document.querySelector('.hrs-line');
 
   const now = new Date();
+  
   const seconds = now.getSeconds();
   const minuts = now.getMinutes();
   const hours = now.getHours();
