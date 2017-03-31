@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title>Array Cardio</title>
+</head>
+Array Cardio
+<body>
+
+</body>
+<script>
+const inventor = [
+{first: 'Albert', last:'Einstein', year:1978,passed:1955},
+{first: 'Issac', last:'Newton', year:1643,passed:1722},
+{first: 'Galileo', last:'Galilei', year:1564,passed:1642},
+{first: 'Marie', last:'Curie', year:1867,passed:1934},
+{first: 'Nicolas', last:'Copernico', year:1474,passed:1543},
+{first: 'Max', last:'Planck', year:1858,passed:1947},
+];
+
+const people =['katherine , Marrugo', 'Ana, Perez', 'Mariano, Marrugo', 'Tatiana, Marrugo',
+'Edith, Reales', 'Juliana, Reales', 'Nayleth, Sarmiento', 'Joseue, Sarmiento', 'Edwin, rodriguez',
+'Margarita, Medina','Eric, Perez', 'Luz, Cantillo', 'JAvier, Ramirez','Julio, Suarez', 'Alvaro, Wilchez',
+'Maria, Macareno', 'Jose, Mora', 'Divier MArtinez', 'Marcela, Galindo', 'Tomas, uribe', 'Rafael, Santos',
+'Luis, Medrano', 'Paulina, Rubio', 'Jose, Reyes', 'Nicanor, Melendez', 'Hector, Ribon', 'Felipe, Dominguez'
+];
+// 1. Filtrar la lista por aquellos que nacieron en los 1500's
+
+function filterOne(list){
+  if(list.year >= 1500 &&  list.year <= 1599){
+    return true;
+  }
+}
+const filter1 = inventor.filter(filterOne);
+console.log("1. Filtrar la lista por aquellos que nacieron en los 1500's");
+console.table(filter1);
+
+// 2. array con los nombres y apellidos
+function filtertwo(list){
+const conct = list.first +" "+ list.last;
+return conct;
+}
+const filter2 = inventor.map(filtertwo);
+console.log("2. array con los nombres y apellidos");
+console.log(filter2);
+
+// 3. Ordenar por Fecha de nacimiento, de mayor a menor
+function filterthree(a,b){
+  if (a.year<b.year){
+    console.log(a.year+' - '+b.year);
+    return 1;
+  }
+;
+}
+const filter3 = inventor.sort(filterthree);
+console.log(" 3. Ordenar por Fecha de nacimiento, de mayor a menor");
+console.table(filter3);
+
+// 4. Cuantos anios vivio cada inventor
+function filterfour(list){
+const conct = list.year - list.past;
+return conct;
+}
+const filter4 = inventor.map(filterfour);
+console.log("4. Cuantos anios vivio cada inventor");
+console.log(filter4);
+
+
+</script>
+</html>
