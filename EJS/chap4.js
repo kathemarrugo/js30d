@@ -111,3 +111,45 @@ console.log(listToArray(arrayToList([10, 20, 30])));
 // → {value: 10, rest: {value: 20, rest: null}}
 //console.log(nth(arrayToList([10, 20, 30]), 1));*/
 // → 20
+
+/*Deep comparison*/
+
+function deepEqual(val1, val2){
+  var result;
+  if(typeof(val1)!=typeof(val2)){
+   result= false;
+  }else{
+    if(val1===val2){
+     result= true;
+    }else{
+     result= false;
+    } 
+    if (typeof(val1) ==='object' && typeof(val1) ==='object' ){
+      var ob1=  Object.keys(val1);
+      var ob2=  Object.keys(val2);
+      if(ob1.length!=ob2.length){
+        result= false;
+      }else{
+       /*var ob1=  Object.keys(val1);
+       var ob2=  Object.keys(val2);
+       for(i=0;i<ob1.length;i++){
+       console.log(ob1[i].value);
+       }*/
+        for(var i in val1){
+     		console.log(i);
+       		console.log(val1[i]);
+        }
+    }
+  }
+  }
+  return result;
+}
+
+
+  var obj = {here: {is: "an"}, object: 2};
+  console.log(deepEqual(obj, obj));
+  // → true
+  console.log(deepEqual(obj, {here: 1, object: 2}));
+  // → false
+  //console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+  // → true
