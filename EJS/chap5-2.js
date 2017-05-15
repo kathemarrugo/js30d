@@ -21,19 +21,22 @@ function centuryList(array){
   return list
  }
 
-function final(array, century){
-  var exObject = {};
-  century.forEach(function(centu){
-    exObject[centu]= average(array.filter(lifeExpec).map(age));
-  });
-
- return exObject;
+ function final(array, century){
+   var exObject = {};
+   century.forEach(function(centu){
+     console.log(centu);
+     exObject[centu]= average(array.filter(function lifeExpec(array){
+       return (Math.ceil(array.died/100)) == centu;
+     }).map(age));
+   });
+   return exObject;
 }
-
 
 console.log(final(ancestry,centuryList(ancestry)));
 //console.log(ancestry.filter(lifeExpec));
 // Your code here.
+
+
 
 // → 16: 43.5
 //   17: 51.2
@@ -44,6 +47,37 @@ console.log(final(ancestry,centuryList(ancestry)));
 
 /*Opcion 2
 Crear un nuevo objeto solo con dos valores : la decada y la edaad
-El nuevo objeto, 
+El nuevo objeto,
 
 */
+
+
+/*Ultimo Ejercicio*/
+
+if(!funct(aValue)){
+  isTrue = false;
+}else{isTrue = true;}
+});
+return isTrue;
+}
+
+
+function some(array, funct){
+var isTrue = false;
+array.forEach(function(aValue){
+if(funct(aValue)){
+  isTrue = true;
+}//else{isTrue = false;}
+});
+return isTrue;
+}
+
+
+console.log(every([NaN, NaN, NaN], isNaN));
+// → true
+console.log(every([NaN, NaN, 4], isNaN));
+// → false
+console.log(some([NaN, 3, 4], isNaN));
+// → true
+console.log(some([2, 3, 4], isNaN));
+// → false
